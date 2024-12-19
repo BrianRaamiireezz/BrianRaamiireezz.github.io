@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfolio site for a web developer">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>
+        Portfolio Site
+    </title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Portfolio Site
+        </h1>
+
+        <button aria-label="Toggle navigation" class="hamburger_menu" onclick="toggleMenu()">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+
+        <nav role="navigation">
+            <ul>
+                <li>
+                    <a href="#about_me">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#my_skills">
+                        My skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact_form">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about_me">
+            <h2>
+                About me
+            </h2>
+
+            <p>
+                I am a web developer with a passion for creating beautiful and functional websites.
+                I am always looking for new challenges and opportunities to learn and grow as a developer.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>
+                Projects
+            </h2>
+
+            <ul class="projects__filter">
+                <li>
+                    <button onclick="filterProjects('All')">
+                        All
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterProjects('Web development')">
+                        Web development
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterProjects('Mobile apps')">
+                        Mobile apps
+                    </button>
+                </li>
+            </ul>
+
+            <article class="project">
+                <h3>
+                    Project 1
+                </h3>
+
+                <p class="project__category">
+                    Web development
+                </p>
+
+                <figure>
+                    <img src="project1.png" alt="Project 1 landing page" onclick="openModal(this)">
+                </figure>
+
+                <p>
+                    This is a project I worked on recently.
+                    It is a website for a local business.
+                    The website is built with HTML, CSS, and JavaScript.
+                    It is fully responsive and works on all devices.
+                </p>
+            </article>
+
+            <article class="project">
+                <h3>
+                    Project 2
+                </h3>
+
+                <p class="project__category">
+                    Mobile apps
+                </p>
+
+                <figure>
+                    <img src="project2.png" alt="Project 2 landing page" onclick="openModal(this)">
+                </figure>
+
+                <p>
+                    This is another project I worked on recently.
+                    It is a mobile app for managing tasks.
+                    The web application is built with React native.
+                    It allows users to create, update, and delete tasks.
+                </p>
+            </article>
+        </section>
+
+        <section id="my_skills">
+            <h2>
+                My skills
+            </h2>
+
+            <ul>
+                <li>
+                    HTML
+                </li>
+                <li>
+                    CSS
+                </li>
+                <li>
+                    JavaScript
+                </li>
+                <li>
+                    React
+                </li>
+                <li>
+                    Node.js
+                </li>
+                <li>
+                    Express
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact_form">
+            <h2>
+                Contact me
+            </h2>
+
+            <form>
+                <label for="name">
+                    Name
+                </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">
+                    Message
+                </label>
+                <textarea id="message" name="message" required></textarea>
+
+                <section class="contact_form__feedback">
+
+                </section>
+
+                <button type="submit">
+                    Send
+                </button>
+        </section>
+
+        <section id="projects_images_modal">
+            <button onclick="closeModal()">
+                Close modal
+            </button>
+
+            <figure>
+                <img src="" alt="">
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Brian Eduardo Ibarra Ramírez
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
